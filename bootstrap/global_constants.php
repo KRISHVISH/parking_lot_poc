@@ -1,0 +1,3 @@
+<?php
+
+define('SPECIAL_CATEGORY_RESRVATION', '20');
