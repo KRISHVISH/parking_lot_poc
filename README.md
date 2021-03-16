@@ -1,61 +1,45 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+**Parking Lot **
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+The office basement has a parking lot of 120 car parking space capacity out of which 20% is reserved for differently-abled and pregnant women  since its closest to the lift.   
+Reserving a parking space has become a tedious job and consumes a good amount of time, hence management has decided to  automate it based on a first come first serve basis with the following features.  
 
-## About Laravel
+**Requirements: **  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Users can book a parking space 15 mins prior to arrival, in which he will get a parking number.   
+If the user fails to reach in 30 mins then the allotted space again goes for rebooking (15 mins extra wait time).  If Reserved space is occupied completely then the reserved users will be allotted general parking space.   
+If 50% capacity is utilized, then 15 mins extra wait time will be eliminated (for both reserved and general).   
+If there is a clash for the general use and reserved for a general parking spot than the reserved user will be a priority.   
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Guidelines: **  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+You can use any Framework for the PHP runtime environment.   
+You must use a SQL database.   
+UI is not required.   
+3 mandatory API is required for QA   
+Get all available parking slots   
+Get all occupied parking slots   Total registered users   
 
-## Learning Laravel
+**Evaluation: **  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Database design/ Data Structure.   
+API structure with appropriate standards.   
+Business Logic.   
+The scope provided for further added features.   
+API and code version support.   
+Quality of code.  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**STEPS TO RUN THE APPLICATION**
 
-## Laravel Sponsors
+- Run Composer Update 
+- Set Up DB in env file or config/database.php
+- Run the Queries in path "database\queries\parking_lot_tables_schema.sql" in SQL studio
+- You can import the API's from https://www.getpostman.com/collections/5d21a4ea20b16c9b954a
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+**TECH STACK**
 
-### Premium Partners
+- PHP Laravel Framework 
+- MS SQL 
+- AWS SQS for queue jobs
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**API Documentation**
+https://www.getpostman.com/collections/5d21a4ea20b16c9b954a
